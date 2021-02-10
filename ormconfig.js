@@ -1,9 +1,8 @@
 const { Config } = require('@foal/core');
 
 module.exports = {
-  type: Config.getOrThrow('database.type', 'string'),
+  type: 'mysql', // or 'postgres'
 
-  url: Config.get('database.url', 'string'),
   host: Config.get('database.host', 'string'),
   port: Config.get('database.port', 'number'),
   username: Config.get('database.username', 'string'),
